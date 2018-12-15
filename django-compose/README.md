@@ -2,8 +2,17 @@
 
 - [Quickstart: Compose and Django | Docker Documentation](https://docs.docker.com/compose/django/#define-the-project-components)
 
+### 创建项目
+
+命令：
+
 ```bash
 $ docker-compose run web django-admin.py startproject composeexample .
+```
+
+执行情况：
+
+```bash
 Starting django-compose_db_1 ... done
 Building web
 Step 1/7 : FROM python:3
@@ -54,6 +63,8 @@ WARNING: Image for service web was built because it did not already exist. To re
 $
 ```
 
+容器的运行情况：
+
 ```bash
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
@@ -68,7 +79,7 @@ Dockerfile         composeexample     manage.py
 README.md          docker-compose.yml requirements.txt
 ```
 
-
+`composeexample`的内容：
 
 ```bash
 $ ls composeexample/
