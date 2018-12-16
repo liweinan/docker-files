@@ -8,13 +8,13 @@ docker stop $(docker ps -q)
 删掉所有images：
 
 ```bash
-docker rmi $(docker ps -aq)
+docker rmi -f $(docker images -q)
 ```
 
 删掉所有containers：
 
 ```bash
-docker rmi $(docker ps -aq)
+docker rm -f $(docker ps -aq)
 ````
 
 
