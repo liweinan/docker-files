@@ -1,4 +1,3 @@
 FROM alpine
-COPY . /app
-RUN apk add python bash
-CMD python /app/app.py
+RUN echo "echo 'Hello, world'" > /tmp/run.sh
+ENTRYPOINT sh /tmp/run.sh
